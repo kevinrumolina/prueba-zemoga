@@ -362,7 +362,8 @@ hr[role="separator"] {
 .rulings-container {
     display: flex;
     width: calc(100vw - 2rem);
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 .ruling-block {
     width: 300px;
@@ -608,7 +609,8 @@ main h2 {
     }
 
     .rulings-container {
-        overflow: unset;
+        overflow-x: unset;
+        overflow-y: unset;
         flex-wrap: wrap;
         justify-content: space-between;
     }

@@ -98,7 +98,16 @@
         </aside>
         <main role="main">
             <!-- Start: Implementation -->
-            <h2 class="rulings-title">Previous Rulings</h2>
+            <section class="rulings-heading__container">
+                <h2 class="rulings-title">Previous Rulings</h2>
+                <div class="rulings-type__list">
+                    <button class="rulings-type__list--selected rulings-type"></button>
+                    <div class="rulings-type__list--options">
+                        <button class="rulings-type__list--list rulings-type">List</button>
+                        <button class="rulings-type__list--grid rulings-type">Grid</button>
+                    </div>
+                </div>
+            </section>
             <div class="rulings-container"></div>
             <script src="./sources/main.js" type="module"></script>
             <!-- End: Implementation -->
