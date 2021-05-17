@@ -368,9 +368,11 @@ hr[role="separator"] {
     width: 300px;
     height: 300px;
     position: relative;
-    background-size: contain;
     flex-shrink: 0;
     margin-right: 12px;
+}
+.ruling-image {
+    width: 100%;
 }
 .ruling-block__linear--gradient {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, var(--color-darker-background) 100%);
