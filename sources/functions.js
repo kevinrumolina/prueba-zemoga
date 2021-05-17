@@ -3,16 +3,16 @@ const getDateDifference = startDate => {
     const date = new Date(startDate);
     const difference = (today - date);
 
-    if (difference / (1000 * 60 * 60 * 24 * 365) > 0) {
+    if (difference / (1000 * 60 * 60 * 24 * 365) > 1) {
         const years = Math.floor(difference / (1000 * 60 * 60 * 24 * 365));
         return years >= 2 ? `${years} years ago` : `${years} year ago`;
-    } else if (difference / (1000 * 60 * 60 * 24 * 30) > 0) {
+    } else if (difference / (1000 * 60 * 60 * 24 * 30) > 1) {
         const months = Math.floor(difference / (1000 * 60 * 60 * 24 * 30));
         return months >= 2 ? `${months} months ago` : `${months} month ago`;
-    } else if (difference / (1000 * 60 * 60 * 24) > 0) {
+    } else if (difference / (1000 * 60 * 60 * 24) > 1) {
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
         return days >= 2 ? `${days} days ago` : `${days} day ago`;
-    } else if (difference / (1000 * 60 * 60) > 0) {
+    } else if (difference / (1000 * 60 * 60) > 1) {
         const hours = Math.floor(difference / (1000 * 60 * 60));
         return hours >= 2 ? `${hours} hours ago` : `${hours} hour ago`;
     } else {
@@ -63,4 +63,4 @@ const createComponent = data => {
     mainContainer.appendChild(componentContainer);
 }
 
-export { getDateDifference, setVotationContainer, winningVote, createComponent };
+export { createComponent };
