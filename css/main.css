@@ -385,13 +385,15 @@ hr[role="separator"] {
     font-size: 30px;
     font-weight: 400;
     margin-bottom: 0;
-    padding: 0 2.5rem;
+    padding: 0 2rem;
 }
 .ruling-block__excerpt, .ruling-block__vote {
     font-size: 15px;
 }
 .ruling-block__excerpt {
+    max-height: 75px;
     margin: 7px 0 12px;
+    overflow: scroll;
 }
 .ruling-block__last--update, .ruling-block__excerpt, .ruling-block__vote--container {
     padding: 0 2.5rem;
