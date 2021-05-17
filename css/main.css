@@ -66,7 +66,7 @@ hr[role="separator"] {
     background-color: transparent;
 }
 
-.icon-button[aria-label="thumbs up"] {
+.icon-button[aria-label="thumbs up"], .ruling-block__votation--container > .positive {
     background-color: rgba(var(--color-green-positive), .8);
 }
 
@@ -74,7 +74,7 @@ hr[role="separator"] {
     background-color: rgba(var(--color-green-positive), 1);
 }
 
-.icon-button[aria-label="thumbs down"] {
+.icon-button[aria-label="thumbs down"], .ruling-block__votation--container > .negative {
     background-color: rgba(var(--color-yellow-negative), .8);
 }
 
@@ -356,6 +356,74 @@ hr[role="separator"] {
     font-size: 1.25rem;
     font-weight: 300;
     letter-spacing: -.05rem;
+}
+
+.ruling-block {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+.ruling-block__linear--gradient {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, var(--color-darker-background) 100%);
+    position: absolute;
+    bottom: 0;
+}
+.ruling-block, .ruling-block__title { color: var(--color-white); }
+.ruling-block__title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    padding: 0 30px;
+}
+.ruling-block__excerpt, .ruling-block__vote {
+    font-size: 1.25rem;
+}
+.ruling-block__excerpt {
+    margin: 7px 0 12px;
+}
+.ruling-block__last--update, .ruling-block__excerpt, .ruling-block__vote--container {
+    padding: 0 36px;
+}
+.ruling-block__last--update {
+    font-weight: 700;
+    text-align: right;
+}
+.ruling-block__vote--container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.ruling-block .icon-button {
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+}
+.ruling-block .icon-button > img {
+    width: 55%;
+}
+.ruling-block__vote {
+    width: 105px;
+    border: 1px solid var(--color-white);
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--color-darker-background);
+}
+.ruling-block__votation--container {
+    width: 100%;
+    height: 36px;
+    font-size: 1.5rem;
+}
+.ruling-block__votation--container {
+    display: flex;
+    width: 100%;
+    height: 36px;
+    font-size: 1.5rem;
+}
+.ruling-block__votation--container > .positive, .ruling-block__votation--container > .negative{
+    height: 100%;
+    line-height: 36px;
+    padding: 0 12px;
 }
 
 .banner-bottom {
