@@ -358,15 +358,17 @@ hr[role="separator"] {
     letter-spacing: -.05rem;
 }
 
+/*Widget Styles for Mobile*/
 .rulings-container {
     display: flex;
-    width: calc(100vw - 24px);
+    width: calc(100vw - 2rem);
     overflow: scroll;
 }
 .ruling-block {
     width: 300px;
     height: 300px;
     position: relative;
+    background-size: contain;
     flex-shrink: 0;
     margin-right: 12px;
 }
@@ -374,24 +376,26 @@ hr[role="separator"] {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, var(--color-darker-background) 100%);
     position: absolute;
     bottom: 0;
+    width: 100%;
 }
 .ruling-block, .ruling-block__title { color: var(--color-white); }
 .ruling-block__title {
-    font-size: 2.5rem;
+    font-size: 30px;
     font-weight: 400;
     margin-bottom: 0;
-    padding: 0 30px;
+    padding: 0 2rem;
 }
 .ruling-block__excerpt, .ruling-block__vote {
-    font-size: 1.25rem;
+    font-size: 15px;
 }
 .ruling-block__excerpt {
     margin: 7px 0 12px;
 }
 .ruling-block__last--update, .ruling-block__excerpt, .ruling-block__vote--container {
-    padding: 0 36px;
+    padding: 0 2rem;
 }
 .ruling-block__last--update {
+    font-size: 12px;
     font-weight: 700;
     text-align: right;
 }
@@ -407,7 +411,7 @@ hr[role="separator"] {
     margin-right: 12px;
 }
 .ruling-block .icon-button > img {
-    width: 55%;
+    width: 50%;
 }
 .ruling-block__vote {
     width: 105px;
@@ -587,6 +591,17 @@ main h2 {
 
     .banner-top .banner__right {
         flex-basis: 80%;
+    }
+
+    .rulings-container {
+        overflow: unset;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .ruling-block {
+        width: calc(50vw - 1rem - 10px);
+        height: calc(50vw - 1rem - 10px);
+        margin: 0 0 21px 0;
     }
 
     .banner-bottom {
@@ -802,6 +817,14 @@ main h2 {
     .banner-top .icon-button {
         display: block;
         margin-left: 2rem;
+    }
+
+    .rulings-container {
+        width: 100%;
+    }
+    .ruling-block {
+        width: 348px;
+        height: 348px;
     }
 
     .banner-bottom .banner__cta {
