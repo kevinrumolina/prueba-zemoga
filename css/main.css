@@ -618,6 +618,40 @@ main h2 {
     .rulings-type__list {
         display: block;
     }
+    .rulings-type__list--selected, .rulings-type__list--options label{
+        width: 131px;
+        height: 28px;
+        cursor: pointer;
+        border: 2px solid black;
+        text-align: center;
+        line-height: 28px;
+        background-color: var(--color-white);
+    }
+    .rulings-type__list--selected {
+        position: relative;
+    }
+    .list-type {
+        display: inline-block;
+        width: 100%;
+    }
+    .rulings-type__list--selected svg{
+        position: absolute;
+        top: 11px;
+        right: 7px;
+    }
+    .rulings-type__list--options label{
+        display: none;
+        position: relative;
+        z-index: 1;
+        left: -2px;
+    }
+    .rulings-type__list--options label:nth-child(2) {
+        top: -2px;
+    }
+    #list-menu { display: none; }
+    #list-menu:checked ~ .rulings-type__list--options label {
+        display: block;
+    }
     .rulings-container {
         overflow-x: unset;
         overflow-y: unset;
