@@ -98,13 +98,19 @@
         </aside>
         <main role="main">
             <!-- Start: Implementation -->
-            <section class="rulings-heading__container">
+            <section class="rulings-heading">
                 <h2 class="rulings-title">Previous Rulings</h2>
                 <div class="rulings-type__list">
-                    <button class="rulings-type__list--selected rulings-type"></button>
+                    <button class="rulings-type__list--selected rulings-type">Grid</button>
                     <div class="rulings-type__list--options">
-                        <button class="rulings-type__list--list rulings-type">List</button>
-                        <button class="rulings-type__list--grid rulings-type">Grid</button>
+                        <label>
+                            List
+                            <input type="radio" name="list-type" value="list">
+                        </label>
+                        <label>
+                            Grid
+                            <input type="radio" name="list-type" value="grid">
+                        </label>
                     </div>
                 </div>
             </section>

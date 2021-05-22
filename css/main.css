@@ -359,6 +359,9 @@ hr[role="separator"] {
 }
 
 /*Widget Styles for Mobile*/
+.rulings-type__list {
+    display: none;
+}
 .rulings-container {
     display: flex;
     width: calc(100vw - 2rem);
@@ -608,6 +611,13 @@ main h2 {
         flex-basis: 80%;
     }
 
+    .rulings-heading {
+        display: flex;
+        justify-content: space-between;
+    }
+    .rulings-type__list {
+        display: block;
+    }
     .rulings-container {
         overflow-x: unset;
         overflow-y: unset;
