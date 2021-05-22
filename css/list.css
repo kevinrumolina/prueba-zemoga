@@ -2,10 +2,14 @@
     .ruling-block {
         width: calc(100vw - 2rem);
         height: 142px;
+        overflow: hidden;
     }
     .ruling-image {
-        width: 220px;
-        height: 142px;
+        width: 267px;
+        height: 170px;
+        position: absolute;
+        top: -15px;
+        left: -30px;
     }
     .ruling-block__winning--vote {
         top: 0;
