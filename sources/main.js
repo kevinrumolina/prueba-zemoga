@@ -2,7 +2,7 @@ import { createComponent } from './functions.js';
 
 
 
-if (window.localStorage.data === "undefined") {
+if (window.localStorage.data === undefined) {
     fetch('../assets/data.json')
     .then(response => response.json())
     .then(response => {
