@@ -6,7 +6,4 @@ fetch('../assets/data.json')
     response.data.forEach(element => {
         createComponent(element);
     });
-
-    console.log(response.data);
-    console.log(document.querySelector('.rulings-container'))
 });
