@@ -32,8 +32,8 @@ const winningVote = (positive, negative, node) => {
 
 const setVotationContainer = (positive, negative, node) => {
     const totalVotes = positive + negative;
-    const positivePercentaje = Math.floor((positive / totalVotes) * 100);
-    const negativePercentaje = Math.floor((negative / totalVotes) * 100);
+    const positivePercentaje = ((positive / totalVotes) * 100).toFixed(2);
+    const negativePercentaje = ((negative / totalVotes) * 100).toFixed(2);
     const positiveContainer = node.querySelector('.positive');
     const negativeContainer = node.querySelector('.negative');
     const thumbsUp = '<img src="./assets/img/thumbs-up.svg" alt="thumbs up"></img>';
@@ -46,7 +46,7 @@ const setVotationContainer = (positive, negative, node) => {
 };
 
 const createComponent = data => {
-    const componentInnerHtml = '<img class="ruling-image" src="" alt=""><div class="ruling-block__winning--vote vote-block"></div><div class="ruling-block__linear--gradient"><h2 class="ruling-block__title"></h2><p class="ruling-block__excerpt"></p><p class="ruling-block__last--update"></p><div class="ruling-block__vote--container"><button class="icon-button" aria-label="thumbs up"><img src="assets/img/thumbs-up.svg" alt="thumbs up" /></button><button class="icon-button" aria-label="thumbs down"><img src="assets/img/thumbs-down.svg" alt="thumbs down" /></button><div class="ruling-block__vote">Vote Now</div></div><div class="ruling-block__votation--container"><div class="positive"><img src="./assets/img/thumbs-up.svg" alt="thumbs up"></div><div class="negative"><img src="./assets/img/thumbs-down.svg" alt="thumbs down"></div></div></div>'
+    const componentInnerHtml = '<img class="ruling-image" src="" alt=""><div class="ruling-block__winning--vote vote-block"></div><div class="ruling-block__linear--gradient"><h2 class="ruling-block__title"></h2><p class="ruling-block__excerpt"></p><p class="ruling-block__last--update"></p><div class="ruling-block__vote--container"><button class="icon-button" aria-label="thumbs up"><img src="assets/img/thumbs-up.svg" alt="thumbs up" /></button><button class="icon-button" aria-label="thumbs down"><img src="assets/img/thumbs-down.svg" alt="thumbs down" /></button><button class="ruling-block__vote" disabled>Vote Now</button></div><div class="ruling-block__votation--container"><div class="positive"><img src="./assets/img/thumbs-up.svg" alt="thumbs up"></div><div class="negative"><img src="./assets/img/thumbs-down.svg" alt="thumbs down"></div></div></div>'
 
     const mainContainer = document.querySelector('.rulings-container')
     const componentContainer = Object.assign(document.createElement('article'), {className: 'ruling-block'});
