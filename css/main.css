@@ -633,6 +633,7 @@ main h2 {
     .list-type {
         display: inline-block;
         width: 100%;
+        cursor: pointer;
     }
     .rulings-type__list--selected svg{
         position: absolute;
