@@ -649,7 +649,7 @@ main h2 {
     .rulings-type__list--options label:nth-child(2) {
         top: -2px;
     }
-    #list-menu { display: none; }
+    #list-menu, input[name="list-type"] { display: none; }
     #list-menu:checked ~ .rulings-type__list--options label {
         display: block;
     }
