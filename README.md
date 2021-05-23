@@ -6,7 +6,7 @@ Zemoga Front End Development - Candidate Test v2.1
 
 ### Overview
 
-This Was my test approach using HTML, CSS and Vanilla JavaScript, hope you enjoy reviewing my code as much as me during the time I expend coding it 😬, the only step you need to do to start enjoying it is to open the index.html in your browser, or even if you don't want to waste time cloning this repo you can follow this link(https://prueba-zemoga.netlify.app/) to check the site deployed!
+This Was my test approach using HTML, CSS and Vanilla JavaScript, hope you enjoy reviewing my code as much as me during the time I expend coding it 😬, the only step you need to do to start enjoying it is to open the index.html in your browser, or even if you don't want to waste time cloning this repo you can follow this [deployed site](https://prueba-zemoga.netlify.app/) to check it!
 
 Hope we can keep in touch!.
 
