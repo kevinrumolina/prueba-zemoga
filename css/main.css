@@ -70,7 +70,7 @@ hr[role="separator"] {
     background-color: rgba(var(--color-green-positive), .8);
 }
 
-.icon-button[aria-label="thumbs up"]:hover, .ruling-block > .positive {
+.icon-button[aria-label="thumbs up"]:hover, input[value="positive"]:checked + .icon-button, .ruling-block > .positive {
     background-color: rgba(var(--color-green-positive), 1);
 }
 
@@ -78,7 +78,7 @@ hr[role="separator"] {
     background-color: rgba(var(--color-yellow-negative), .8);
 }
 
-.icon-button[aria-label="thumbs down"]:hover, .ruling-block > .negative {
+.icon-button[aria-label="thumbs down"]:hover, input[value="negative"]:checked + .icon-button, .ruling-block > .negative {
     background-color: rgba(var(--color-yellow-negative), 1);
 }
 
@@ -359,7 +359,7 @@ hr[role="separator"] {
 }
 
 /*Widget Styles for Mobile*/
-.rulings-type__list {
+.rulings-type__list, input[name*="calification"], .voteAgain  {
     display: none;
 }
 .rulings-container {
