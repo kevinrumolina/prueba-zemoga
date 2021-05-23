@@ -8,6 +8,8 @@ Zemoga Front End Development - Candidate Test v2.1
 
 This Was my test approach using HTML, CSS and Vanilla JavaScript, hope you enjoy reviewing my code as much as me during the time I expend coding it 😬, the only step you need to do to start enjoying it is to open the index.html in your browser, or even if you don't want to waste time cloning this repo you can follow this [deployed site](https://prueba-zemoga.netlify.app/) to check it!
 
+In case you have any issue reproducing, is probably that you have some value setted to window.localStorage.data, you can fix it running window.localStorage.clear() in your browser console, this will fix the issue.
+
 Hope we can keep in touch!.
 
 
