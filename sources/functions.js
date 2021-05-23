@@ -46,7 +46,7 @@ const setVotationContainer = (positive, negative, node) => {
 };
 
 const createComponent = data => {
-    const componentInnerHtml = '<img class="ruling-image" src="" alt=""><div class="ruling-block__winning--vote vote-block"></div><div class="ruling-block__linear--gradient"><h2 class="ruling-block__title"></h2><p class="ruling-block__excerpt"></p><p class="ruling-block__last--update"></p><div class="ruling-block__vote--container"><button class="icon-button" aria-label="thumbs up"><img src="assets/img/thumbs-up.svg" alt="thumbs up" /></button><button class="icon-button" aria-label="thumbs down"><img src="assets/img/thumbs-down.svg" alt="thumbs down" /></button><button class="ruling-block__vote" disabled>Vote Now</button></div><div class="ruling-block__votation--container"><div class="positive"><img src="./assets/img/thumbs-up.svg" alt="thumbs up"></div><div class="negative"><img src="./assets/img/thumbs-down.svg" alt="thumbs down"></div></div></div>'
+    const componentInnerHtml = `<img class="ruling-image" src="" alt=""><div class="ruling-block__winning--vote vote-block"></div><div class="ruling-block__linear--gradient"><h2 class="ruling-block__title"></h2><p class="ruling-block__excerpt"></p><p class="ruling-block__last--update"></p><div class="voteNow"><div class="ruling-block__vote--container"><label class="icon-button" aria-label="thumbs up"><input type="radio" name="calification-${data.name}" value="positive"><img src="assets/img/thumbs-up.svg" alt="thumbs up"></label><label class="icon-button" aria-label="thumbs down"><input type="radio" name="calification-${data.name}" value="negative"><img src="assets/img/thumbs-down.svg" alt="thumbs down"></label><button class="ruling-block__vote">Vote Now</button></div></div><div class="voteAgain"><div class="ruling-block__vote--container">Thank you for your vote! &nbsp;<button class="ruling-block__vote vote-again">Vote Again</button></div></div><div class="ruling-block__votation--container"><div class="positive"><img src="./assets/img/thumbs-up.svg" alt="thumbs up"></div><div class="negative"><img src="./assets/img/thumbs-down.svg" alt="thumbs down"></div></div></div>`
 
     const mainContainer = document.querySelector('.rulings-container')
     const componentContainer = Object.assign(document.createElement('article'), {className: 'ruling-block'});
@@ -61,6 +61,49 @@ const createComponent = data => {
     setVotationContainer(data.votes.positive, data.votes.negative, componentContainer.querySelector('.ruling-block__votation--container'));
 
     mainContainer.appendChild(componentContainer);
+};
+
+const toogleElements = (hideElement, showElement) => {
+    hideElement.style.display = 'none';
+    showElement.style.display = 'block';
 }
 
-export { createComponent };
+const countVote = node => {
+    const positive = node.path[1].querySelector('input[value="positive"]');
+    const negative = node.path[1].querySelector('input[value="negative"]');
+
+    if(positive.checked || negative.checked) {
+        const authorName = node.path[3].querySelector('.ruling-block__title').innerText;
+        const data = JSON.parse(window.localStorage.data);
+
+        if(positive.checked) {
+            data.forEach(object => {
+                if(object.name === authorName) {
+                    object.votes.positive += 1;
+                    setVotationContainer(object.votes.positive, object.votes.negative, node.path[3].querySelector('.ruling-block__votation--container'));
+                    toogleElements(node.path[2], node.path[2].nextElementSibling);
+
+                    const resetBlock = () => toogleElements(node.path[2].nextElementSibling, node.path[2]);
+
+                    node.path[2].nextElementSibling.addEventListener('click', resetBlock);
+                }
+            });
+        } else if (negative.checked){
+            data.forEach(object => {
+                if(object.name === authorName) {
+                    object.votes.negative += 1;
+                    setVotationContainer(object.votes.positive, object.votes.negative, node.path[3].querySelector('.ruling-block__votation--container'));
+                    toogleElements(node.path[2], node.path[2].nextElementSibling);
+
+                    const resetBlock = () => toogleElements(node.path[2].nextElementSibling, node.path[2]);
+
+                    node.path[2].nextElementSibling.addEventListener('click', resetBlock);
+                }
+            });
+        }
+
+        window.localStorage.data = JSON.stringify(data);
+    }
+}
+
+export { createComponent, countVote };

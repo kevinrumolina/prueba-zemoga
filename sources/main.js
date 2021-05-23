@@ -1,6 +1,4 @@
-import { createComponent } from './functions.js';
-
-
+import { createComponent, countVote } from './functions.js';
 
 if (window.localStorage.data === undefined) {
     fetch('../assets/data.json')
@@ -11,6 +9,12 @@ if (window.localStorage.data === undefined) {
         response.data.forEach(element => {
             createComponent(element);
         });
+
+        const voteContainers = document.querySelectorAll('.voteNow .ruling-block__vote');
+
+        voteContainers.forEach(container => {
+            container.addEventListener('click', countVote);
+        });
     });
 } else {
     let data;
@@ -18,5 +22,11 @@ if (window.localStorage.data === undefined) {
     
     data.forEach(element => {
         createComponent(element);
+    });
+
+    const voteContainers = document.querySelectorAll('.voteNow .ruling-block__vote');
+
+    voteContainers.forEach(container => {
+        container.addEventListener('click', countVote);
     });
 }

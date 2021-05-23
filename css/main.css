@@ -384,7 +384,7 @@ hr[role="separator"] {
     bottom: 0;
     width: 100%;
 }
-.ruling-block, .ruling-block__title { color: var(--color-white); }
+.ruling-block, .ruling-block__title, .ruling-block__vote { color: var(--color-white); }
 .ruling-block__title {
     font-size: 30px;
     font-weight: 400;
@@ -417,6 +417,9 @@ hr[role="separator"] {
     width: 30px;
     height: 30px;
     margin-right: 12px;
+}
+.ruling-block .icon-button {
+    text-align: center;
 }
 .ruling-block__winning--vote {
     position: absolute;
