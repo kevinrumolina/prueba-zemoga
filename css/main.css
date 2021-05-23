@@ -82,6 +82,10 @@ hr[role="separator"] {
     background-color: rgba(var(--color-yellow-negative), 1);
 }
 
+input[value="positive"]:checked + .icon-button, input[value="negative"]:checked + .icon-button {
+    border: 2px solid var(--color-white);
+}
+
 .icon-button > img {
     width: 100%;
     height: 100%;
