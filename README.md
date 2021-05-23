@@ -6,7 +6,12 @@ Zemoga Front End Development - Candidate Test v2.1
 
 ### Overview
 
-Our client's app Rule of Thumb™️ tracks the sentiment of their users on trending and controversial people from different fields, including politics, business, media and entertainment, etc. The website has the following requirement: they need to present their users with an easy way to share their opinion on each presented celebrity, using votes (thumbs up and down), and display the results to the user while the poll is open. These features should be available to all users, regardless of where they're accessing the website from, whether it's a smartphone, a tablet or a desktop computer.
+This Was my test approach using HTML, CSS and Vanilla JavaScript, hope you enjoy reviewing my code as much as me during the time I expend coding it 😬, the only step you need to do to start enjoying it is to open the index.html in your browser, or even if you don't want to waste time cloning this repo you can follow this link(https://prueba-zemoga.netlify.app/) to check the site deployed!
+
+Hope we can keep in touch!.
+
+
+
 
 > 👉  **The challenge**: Build a responsive display component for the data provided, and add it to the Rule of Thumb™️ website, complying with the design specifications.
 
